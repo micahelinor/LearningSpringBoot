@@ -26,4 +26,10 @@ public class TopicController {
         topicservice.addTopic(topic);                   //then Spring MVC converts it from json to object "Topic"
     }
 
+    @RequestMapping(method= RequestMethod.PUT, value="/topics/{id}")
+    public void updateTopic(@RequestBody Topic topic, @PathVariable String id) {
+        topicservice.updateTopic(topic, id);
+    }
+
+
 }
