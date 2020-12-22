@@ -1,9 +1,7 @@
 package springbootquickstart.topic;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -13,13 +11,19 @@ public class TopicController {
     @Autowired  //the variable topicservice has a dependency
     private TopicService topicservice;
 
-    @RequestMapping("/topic")
+    @RequestMapping("/topics")
     public List<Topic> getAllTopics() {
         return topicservice.getAllTopics();
     }
 
-    @RequestMapping("/topic/{id}") //{x} means that x is a variable
+    @RequestMapping("/topics/{id}") //{x} means that x is a variable
     public Topic getTopic(@PathVariable String id) {    //@PathVariable  is indicating that id is variable that will come from the path
         return topicservice.getTopic(id);
     }
+
+    @RequestMapping(method= RequestMethod.POST, value="/topics")
+    public void addTopic(@RequestBody Topic topic) {    //Request payload would have a json representation of the topic
+        topicservice.addTopic(topic);                   //then Spring MVC converts it from json to object "Topic"
+    }
+
 }
