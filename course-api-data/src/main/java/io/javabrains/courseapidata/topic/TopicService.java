@@ -1,4 +1,4 @@
-package springbootquickstart.topic;
+package io.javabrains.courseapidata.topic;
 
 import org.springframework.stereotype.Service;
 
@@ -9,12 +9,6 @@ import java.util.List;
 
 @Service
 public class TopicService{
-
-    private List<Topic> topics = new ArrayList<>(Arrays.asList(
-            new Topic("Spring", "Spring", "Spring Framework"),
-            new Topic("Java", "Java", "Programming Language"),
-            new Topic("Maven", "Maven", "Dependency Manager")
-    ));
 
     public List<Topic> getAllTopics() {
         return topics;

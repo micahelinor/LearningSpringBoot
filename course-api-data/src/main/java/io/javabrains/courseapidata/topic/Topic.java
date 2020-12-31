@@ -1,6 +1,9 @@
-package springbootquickstart.topic;
+package io.javabrains.courseapidata.topic;
 
+@Entity
 public class Topic {
+
+    @Id
     private String id;
     private String name;
     private String description;
