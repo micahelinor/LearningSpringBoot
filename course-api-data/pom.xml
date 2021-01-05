@@ -12,7 +12,7 @@
 	<artifactId>course-api-data</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>course-api-data</name>
-	<description>Course Api with Data for Springboot</description>
+	<description>Course API with data for Spring Boot QuickStart Java Brains Course</description>
 
 	<properties>
 		<java.version>11</java.version>

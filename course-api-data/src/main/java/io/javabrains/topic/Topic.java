@@ -1,4 +1,7 @@
-package io.javabrains.courseapidata.topic;
+package io.javabrains.topic;
+
+import javax.persistence.Entity;
+import javax.persistence.Id;
 
 @Entity
 public class Topic {
